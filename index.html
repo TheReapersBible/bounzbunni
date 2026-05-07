@@ -1,3 +1,8 @@
+# Updated `index.html` for Bounz Bunni
+
+Replace your entire `index.html` with this updated version.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +28,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(55%);
+      filter: brightness(60%);
     }
 
     .hero-text {
@@ -39,6 +44,11 @@
       font-size: 4rem;
       margin: 0;
       letter-spacing: 2px;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      margin-top: 10px;
     }
 
     .btn {
@@ -66,10 +76,62 @@
 
     .card {
       background: white;
+      border-radius: 20px;
+      width: 280px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
       padding: 20px;
+    }
+
+    .waiver-form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+      background: white;
+      padding: 30px;
       border-radius: 15px;
-      width: 250px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .waiver-form input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .waiver-box {
+      background: #f7f7f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
@@ -85,32 +147,46 @@
 
 <!-- HERO -->
 <div class="hero">
-  <img src="hero.jpg" alt="Bounz Bunni Bounce Houses">
+  <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=1600&auto=format&fit=crop" alt="Cartoon Bunny">
+
   <div class="hero-text">
     <h1>Bounz Bunni</h1>
-    <p>Premium Bounce House Rentals for Any Event</p>
+    <p>Fun Bounce House Rentals For Every Party!</p>
     <a href="#order" class="btn">Book Now</a>
   </div>
 </div>
 
 <!-- PRODUCTS -->
 <section class="section">
-  <h2>🎉 Our Bounce Houses</h2>
+  <h2>🎉 Our Bounce House Favorites</h2>
+
   <div class="products">
 
     <div class="card">
-      <h3>Classic Bounce Castle</h3>
-      <p>Perfect for birthdays, backyard parties, and small events.</p>
+      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop" alt="Bounce House">
+
+      <div class="card-content">
+        <h3>Classic Bounce House</h3>
+        <p>Perfect for birthdays, school events, and family parties.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Deluxe Combo Jump</h3>
-      <p>Includes slide + bounce area for nonstop fun.</p>
+      <img src="https://images.unsplash.com/photo-1563906267088-b029e7101114?q=80&w=1200&auto=format&fit=crop" alt="Slide Bounce House">
+
+      <div class="card-content">
+        <h3>Slide Combo</h3>
+        <p>Bounce, climb, and slide for nonstop fun all day long.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Big Event Inflatable</h3>
-      <p>Built for larger crowds, school events, and festivals.</p>
+      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop" alt="Party Setup">
+
+      <div class="card-content">
+        <h3>Party Package</h3>
+        <p>Great for big celebrations, events, and weekend fun.</p>
+      </div>
     </div>
 
   </div>
@@ -119,9 +195,11 @@
 <!-- ABOUT -->
 <section class="section" style="background:#ffe3ea;">
   <h2>About Bounz Bunni</h2>
+
   <p>
-    Bounz Bunni provides clean, safe, and fun bounce house rentals for all ages.
-    We bring the energy to birthdays, parties, school events, and community celebrations.
+    Bounz Bunni brings safe, exciting, and unforgettable bounce house
+    experiences to kids and families. We help make birthdays, parties,
+    and events full of energy, laughter, and fun.
   </p>
 </section>
 
@@ -130,7 +208,46 @@
   <h2>📲 Book Your Bounce House</h2>
   <p>Call or text to reserve your date</p>
   <h3>463-332-1460</h3>
-  <p>Fast booking • Affordable pricing • Reliable setup</p>
+</section>
+
+<!-- WAIVER FORM -->
+<section class="section" style="background:#fff;">
+  <h2>Waiver & Agreement</h2>
+
+  <form class="waiver-form">
+
+    <label>Full Name</label><br>
+    <input type="text" required>
+
+    <label>Date of Birth</label><br>
+    <input type="date" required>
+
+    <label>Email</label><br>
+    <input type="email" required>
+
+    <div class="waiver-box">
+      By checking this box, I acknowledge that I have read and agree
+      to the Terms & Conditions of Bounz Bunni. I understand that
+      participation in bounce house activities may involve risk.
+      Bounz Bunni and its owners are not responsible for injuries,
+      damages, misuse, accidents, or incidents occurring during or after
+      use. By booking or participating, I voluntarily assume all
+      responsibility and liability.
+    </div>
+
+    <label style="display:flex; gap:10px; align-items:flex-start;">
+      <input type="checkbox" required style="width:auto; margin-top:4px;">
+
+      <span>
+        I have read and agree to the Terms & Conditions and Liability Waiver.
+      </span>
+    </label>
+
+    <button type="submit" class="submit-btn">
+      Submit Waiver
+    </button>
+
+  </form>
 </section>
 
 <footer>
@@ -139,3 +256,19 @@
 
 </body>
 </html>
+```
+
+## What Changed
+
+* Replaced bunny girls with a kid-friendly cartoon bunny hero image
+* Added pictures to all 3 service boxes
+* Changed the website wording to match bounce house rentals
+* Kept your waiver form and booking section
+* Made the overall design more family friendly and professional
+
+## Final Steps
+
+1. Replace your current `index.html` with this version
+2. Commit changes in GitHub
+3. Vercel will automatically update your live website
+
