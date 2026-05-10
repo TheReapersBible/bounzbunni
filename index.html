@@ -3,138 +3,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bounz Bunni</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff5f7;
-      color: #222;
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#fff5f7;
+      color:#222;
     }
 
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
+    .hero{
+      background:linear-gradient(to bottom,#8ee3ef,#fff5f7);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+      height:100vh;
+      padding:20px;
     }
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(60%);
+    .hero img{
+      width:320px;
+      max-width:90%;
+      margin-bottom:20px;
     }
 
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
+    .hero h1{
+      font-size:4rem;
+      margin:0;
+      color:#ffb703;
     }
 
-    .hero-text h1 {
-      font-size: 4rem;
-      margin: 0;
-      letter-spacing: 2px;
+    .hero p{
+      font-size:1.3rem;
+      color:#333;
+      margin-top:10px;
     }
 
-    .hero-text p {
-      font-size: 1.3rem;
-      margin-top: 10px;
+    .btn{
+      background:#ff4d6d;
+      color:white;
+      padding:14px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:20px;
+      display:inline-block;
     }
 
-    .btn {
-      background: #ff4d6d;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
+    .section{
+      padding:60px 20px;
+      text-align:center;
     }
 
-    .section {
-      padding: 60px 20px;
-      text-align: center;
+    .products{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
     }
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .card{
+      background:white;
+      width:280px;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      width: 280px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
     }
 
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
+    .card-content{
+      padding:20px;
     }
 
-    .card-content {
-      padding: 20px;
+    .waiver-form{
+      max-width:500px;
+      margin:auto;
+      text-align:left;
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .waiver-form {
-      max-width: 500px;
-      margin: auto;
-      text-align: left;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .waiver-form input{
+      width:100%;
+      padding:12px;
+      margin-top:8px;
+      margin-bottom:20px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      box-sizing:border-box;
     }
 
-    .waiver-form input {
-      width: 100%;
-      padding: 12px;
-      margin-top: 8px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+    .waiver-box{
+      background:#f7f7f7;
+      padding:15px;
+      border-radius:10px;
+      margin-bottom:20px;
+      font-size:14px;
+      line-height:1.6;
     }
 
-    .waiver-box {
-      background: #f7f7f7;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      line-height: 1.6;
+    .submit-btn{
+      width:100%;
+      margin-top:25px;
+      padding:14px;
+      border:none;
+      border-radius:30px;
+      background:#ff4d6d;
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
     }
 
-    .submit-btn {
-      width: 100%;
-      margin-top: 25px;
-      padding: 14px;
-      border: none;
-      border-radius: 30px;
-      background: #ff4d6d;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 30px;
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:30px;
     }
   </style>
 </head>
@@ -143,45 +139,61 @@
 
 <!-- HERO -->
 <div class="hero">
-  <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=1600&auto=format&fit=crop" alt="Cartoon Bunny">
 
-  <div class="hero-text">
-    <h1>Bounz Bunni</h1>
-    <p>Fun Bounce House Rentals For Every Party!</p>
-    <a href="#order" class="btn">Book Now</a>
-  </div>
+  <img src="hero.jpg" alt="Bounz Bunni Logo">
+
+  <h1>Bounz Bunni</h1>
+
+  <p>
+    Bouncing & Jumping Fun For All
+  </p>
+
+  <a href="#order" class="btn">
+    Book Now
+  </a>
+
 </div>
 
 <!-- PRODUCTS -->
 <section class="section">
+
   <h2>🎉 Our Bounce House Favorites</h2>
 
   <div class="products">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop" alt="Bounce House">
+      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop">
 
       <div class="card-content">
         <h3>Classic Bounce House</h3>
-        <p>Perfect for birthdays, school events, and family parties.</p>
+
+        <p>
+          Perfect for birthdays, parties, and family events.
+        </p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1563906267088-b029e7101114?q=80&w=1200&auto=format&fit=crop" alt="Slide Bounce House">
+      <img src="https://images.unsplash.com/photo-1563906267088-b029e7101114?q=80&w=1200&auto=format&fit=crop">
 
       <div class="card-content">
         <h3>Slide Combo</h3>
-        <p>Bounce, climb, and slide for nonstop fun all day long.</p>
+
+        <p>
+          Bounce, climb, and slide for nonstop fun.
+        </p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop" alt="Party Setup">
+      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop">
 
       <div class="card-content">
         <h3>Party Package</h3>
-        <p>Great for big celebrations, events, and weekend fun.</p>
+
+        <p>
+          Great for celebrations and weekend events.
+        </p>
       </div>
     </div>
 
@@ -190,49 +202,66 @@
 
 <!-- ABOUT -->
 <section class="section" style="background:#ffe3ea;">
+
   <h2>About Bounz Bunni</h2>
 
   <p>
-    Bounz Bunni brings safe, exciting, and unforgettable bounce house
-    experiences to kids and families. We help make birthdays, parties,
-    and events full of energy, laughter, and fun.
+    Bounz Bunni provides safe, exciting, and unforgettable
+    bounce house experiences for kids and families.
   </p>
+
 </section>
 
 <!-- ORDER -->
 <section id="order" class="section">
+
   <h2>📲 Book Your Bounce House</h2>
-  <p>Call or text to reserve your date</p>
-  <h3>463-332-1460</h3>
+
+  <p>
+    Call or text to reserve your date
+  </p>
+
+  <h3>
+    463-332-1460
+  </h3>
+
 </section>
 
-<!-- WAIVER FORM -->
+<!-- WAIVER -->
 <section class="section" style="background:#fff;">
+
   <h2>Waiver & Agreement</h2>
 
   <form class="waiver-form">
 
-    <label>Full Name</label><br>
+    <label>Full Name</label>
     <input type="text" required>
 
-    <label>Date of Birth</label><br>
+    <label>Date of Birth</label>
     <input type="date" required>
 
-    <label>Email</label><br>
+    <label>Email</label>
     <input type="email" required>
 
     <div class="waiver-box">
-      By checking this box, I acknowledge that I have read and agree
-      to the Terms & Conditions of Bounz Bunni. I understand that
-      participation in bounce house activities may involve risk.
-      Bounz Bunni and its owners are not responsible for injuries,
-      damages, misuse, accidents, or incidents occurring during or after
-      use. By booking or participating, I voluntarily assume all
-      responsibility and liability.
+
+      By checking this box, I acknowledge that I have read
+      and agree to the Terms & Conditions of Bounz Bunni.
+
+      I understand participation in bounce house activities
+      may involve risk.
+
+      Bounz Bunni and its owners are not responsible for
+      injuries, damages, accidents, or incidents occurring
+      during or after use.
+
+      By booking or participating, I voluntarily assume
+      all responsibility and liability.
+
     </div>
 
-    <label style="display:flex; gap:10px; align-items:flex-start;">
-      <input type="checkbox" required style="width:auto; margin-top:4px;">
+    <label style="display:flex;gap:10px;align-items:flex-start;">
+      <input type="checkbox" required style="width:auto;margin-top:4px;">
 
       <span>
         I have read and agree to the Terms & Conditions and Liability Waiver.
@@ -244,6 +273,7 @@
     </button>
 
   </form>
+
 </section>
 
 <footer>
@@ -252,16 +282,6 @@
 
 </body>
 </html>
-```
-
-## What Changed
-
-* Replaced bunny girls with a kid-friendly cartoon bunny hero image
-* Added pictures to all 3 service boxes
-* Changed the website wording to match bounce house rentals
-* Kept your waiver form and booking section
-* Made the overall design more family friendly and professional
-
 ## Final Steps
 
 1. Replace your current `index.html` with this version
